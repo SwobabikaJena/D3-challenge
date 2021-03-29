@@ -1,3 +1,4 @@
+// Set-up chart area
 var svgWidth = 960;
 var svgHeight = 500;
 
@@ -84,7 +85,8 @@ d3.csv("assets/data/data.csv").then(function(data){
         .style("font-weight", "bold")
         .attr("alignment-baseline", "central");
 
-    // Create axes labels
+    // Step 6: Create axes labels
+    // ==============================
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left +40)
@@ -93,7 +95,7 @@ d3.csv("assets/data/data.csv").then(function(data){
         .attr("font-weight", "bold")
         .attr("class", "aText")
         .text("Lacks Healthcare (%)");
-  
+    
     chartGroup.append("text")
         .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
         .attr("class", "aText")
